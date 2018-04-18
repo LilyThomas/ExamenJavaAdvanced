@@ -38,7 +38,7 @@ public class SpringTest {
     		Question question = new Question("kysymykset2", "vastauksineen2");
     		repository.save(question);
     		Question found = repository.findByQuestion("kysymykset2");
-    		
+
         if(found.getAnswer().contains("vastauksineen2")) {
         		singleton.setGrade(2, "testRepo");
         }
