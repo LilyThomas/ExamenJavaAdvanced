@@ -5,5 +5,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface QuestionRepository extends CrudRepository<Question, Long> {
+    String findByQuestion(String question);
 }
 

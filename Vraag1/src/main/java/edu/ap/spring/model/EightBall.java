@@ -1,9 +1,11 @@
 package edu.ap.spring.model;
 import org.springframework.stereotype.Component;
 
+import java.util.Random;
+
 @Component
 public class EightBall {
-	
+	Random rnd = new Random();
 	private String[] answers = {"It is certain", 
 								"Yes definitely", 
 								"Most likely",
@@ -14,8 +16,7 @@ public class EightBall {
 								"Outlook not so good"};
 	
 	public String getRandomAnswer(String question) {
-		String answer = "";
-
+		String answer = answers[rnd.nextInt(answers.length-1)];
 		return answer;
 	}
 
